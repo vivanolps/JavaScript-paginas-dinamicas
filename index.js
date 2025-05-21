@@ -10,5 +10,6 @@ botaoAdicionar.addEventListener("click", (evento) => {   //função de retorno
     }
 
     const itemDaLista = document.createElement("li");
-    console.log(itemDaLista)
+    const containerItemDaLista = document.createElement("div");
+    containerItemDaLista.classList.add("lista-item-container");
 })
