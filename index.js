@@ -25,4 +25,6 @@ botaoAdicionar.addEventListener("click", (evento) => {   //função de retorno
     itemDaLista.appendChild(containerItemDaLista);
     listaDeCompras.appendChild(itemDaLista);
 
+    const diaDaSemana = new Date();
+    console.log(diaDaSemana);
 })
