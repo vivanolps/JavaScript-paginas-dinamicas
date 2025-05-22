@@ -1,10 +1,11 @@
-import { criarItemDaLista } from "./scripts/criarItemDaLista";
+import { criarItemDaLista } from "./scripts/criarItemDaLista.js";
 
 const listaDeCompras = document.getElementById("lista-de-compras");
 const botaoAdicionar = document.getElementById("adicionar-item");
-let contador = 0;
+
 
 botaoAdicionar.addEventListener("click", (evento) => {   //função de retorno
+    evento.preventDefault();
     const itemDaLista = criarItemDaLista();
     listaDeCompras.appendChild(itemDaLista);
     verificarListaVazia();
