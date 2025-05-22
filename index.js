@@ -23,12 +23,21 @@ botaoAdicionar.addEventListener("click", (evento) => {   //função de retorno
     containerItemDaLista.appendChild(nomeItem);
 
     itemDaLista.appendChild(containerItemDaLista);
-    listaDeCompras.appendChild(itemDaLista);
 
-    const diaDaSemana = new Date().toLocaleDateString("pt-BR" , {
+
+        const diaDaSemana = new Date().toLocaleDateString("pt-BR", {
         weekday: "long"});
         const data = new Date().toLocaleDateString("pt-BR")
-        
-        const dataCompleta = `${diaDaSemana} (${data})`
-        console.log(dataCompleta)
+        const hora = new Date().toLocaleTimeString("pt-BR", {
+            hour: "numeric",
+            minute: "numeric"
+        });
+        const  dataCompleta = `${diaDaSemana} (${data}) às ${hora}`
+        const itemData = document.createElement("p");
+        itemData.innerText = dataCompleta;
+        itemData.classList.add("texto-data")
+        itemDaLista.appendChild(itemData)
+
+        listaDeCompras.appendChild(itemDaLista);
+
 })
