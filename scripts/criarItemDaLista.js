@@ -46,4 +46,4 @@ inputCheckbox.addEventListener("click", function() {
         itemDaLista.appendChild(itemData)
 
         return itemDaLista;
-}
+}                                                                                                                              
